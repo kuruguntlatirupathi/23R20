@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <h1 align="center" style="background-color: red;">ChessBoard</h1>
     <style>
         .chessbox{
             width:100px;
@@ -48,14 +49,14 @@
     <div class="chessbox brown">&#9819;</div>
     <div class="chessbox">&#9815;</div>
     <div class="chessbox brown">&#9821;</div><br>
-    <div class="chessbox">&#9816;</div>
-    <div class="chessbox brown">&#9822;</div>
-    <div class="chessbox">&#9817;</div>
-    <div class="chessbox brown">&#9823;</div>
-    <div class="chessbox">&#9812;</div>
-    <div class="chessbox brown">&#9822;</div>
-    <div class="chessbox">&#9816;</div>
-    <div class="chessbox brown">&#9822;</div><br>
+    <div class="chessbox brown">&#9816;</div>
+    <div class="chessbox ">&#9822;</div>
+    <div class="chessbox brown">&#9817;</div>
+    <div class="chessbox ">&#9823;</div>
+    <div class="chessbox brown">&#9812;</div>
+    <div class="chessbox ">&#9822;</div>
+    <div class="chessbox brown">&#9816;</div>
+    <div class="chessbox ">&#9822;</div><br>
     <div class="chessbox"></div>
     <div class="chessbox brown"></div>
     <div class="chessbox"></div>
@@ -64,6 +65,14 @@
     <div class="chessbox brown"></div>
     <div class="chessbox"></div>
     <div class="chessbox brown"></div><br>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div><br>
     <div class="chessbox"></div>
     <div class="chessbox brown"></div>
     <div class="chessbox"></div>
@@ -72,6 +81,14 @@
     <div class="chessbox brown"></div>
     <div class="chessbox"></div>
     <div class="chessbox brown"></div><br>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div><br>
     <div class="chessbox"></div>
     <div class="chessbox brown"></div>
     <div class="chessbox"></div>
@@ -80,77 +97,72 @@
     <div class="chessbox brown"></div>
     <div class="chessbox"></div>
     <div class="chessbox brown"></div><br>
-    <div class="chessbox"></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
+    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
     <div class="chessbox brown"></div>
     <div class="chessbox"></div>
     <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div><br>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div><br>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
-    <div class="chessbox"></div>
-    <div class="chessbox brown"></div>
+    <div class="chessbox "></div>
 </body>
 </html><br>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        .tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; 
-  left: 50%;
-  transform: translateX(-50%);
-  
-  
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-
-    </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tooltip Example</title>
+  <title>Login Form with Tooltip</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .tooltiptext{
+      visibility: hidden;
+      z-index:1;
+    }
+    .form-grouptooltip:hover .tooltiptext{
+      visibility: visible ;
+      z-index:0;
+
+    }
+    .tooltiptext{
+      visibility: hidden;
+      z-index:1;
+    }
+    .form-grouptooltip:hover .tooltiptext{
+      visibility: visible ;
+      z-index:0;
+
+    }
+  </style>
+  
 </head>
 <body>
-  <div class="tooltip">
-    Hover over me
-    <span class="tooltiptext">Tooltip text</span>
+
+  <div class="login-container">
+    <form action="/login" method="POST">
+      <h2 align="center" style="background-color: blueviolet;">Login</h2>
+
+      <div class="form-grouptooltip">
+        <label for="username">Username</label>
+        <input  type="text" id="username"  name="username" required>
+        <span class="tooltiptext">Enter your registered username</span>
+      </div>
+
+      <div class="form-grouptooltip">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <span class="tooltiptext">Enter your secure password</span>
+      </div>
+
+      <button type="submit" style="background-color: blue; color: pink;">Login</button>
+    </form>
   </div>
+
 </body>
 </html>
+
